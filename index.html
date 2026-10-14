@@ -244,7 +244,7 @@ button,.chip,.pill,.tabs button{-webkit-user-select:none;user-select:none;-webki
  .dts{display:flex;gap:16px;font-size:14px;color:var(--mut);white-space:nowrap;margin-left:auto}.dts b{color:var(--ink);font-size:16px}
  .dtop .pill{flex:none;padding:11px 18px;font-size:15px}
 }
-</style></head><body><div id="app"></div>
+</style></head><body><div id="app"></div><nav id="sitelinks" style="max-width:640px;margin:0 auto;padding:6px 16px calc(110px + env(safe-area-inset-bottom,0px));text-align:center;font:12px/1.9 Inter,system-ui,sans-serif;color:#8b8fb5"><a href="tarify.html" style="color:#8b8fb5">Тарифы и контакты</a> · <a href="oferta.html" style="color:#8b8fb5">Оферта</a> · <a href="privacy.html" style="color:#8b8fb5">Политика</a> · <a href="soglasie.html" style="color:#8b8fb5">Согласие</a></nav>
 <script>
 const $=s=>document.querySelector(s),esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let AU={cur:null,acc:{}};try{AU=Object.assign(AU,JSON.parse(localStorage.getItem('tmm_auth')||'null')||{});AU.acc=AU.acc||{}}catch(e){}

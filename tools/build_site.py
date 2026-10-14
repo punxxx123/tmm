@@ -54,6 +54,12 @@ OG = (
 ) % (OG_DESC, SITE, OG_DESC, SITE, SITE, OG_DESC, SITE)
 if 'og:title' not in s and '</title>' in s:
     s = s.replace('</title>', '</title>\n' + OG.rstrip('\n'), 1)
+# Ссылки на юридические страницы под приложением (нужны сайту: тарифы, оферта, политика, согласие, контакты)
+LINKS = ('<nav id="sitelinks" style="max-width:640px;margin:0 auto;padding:6px 16px calc(110px + env(safe-area-inset-bottom,0px));text-align:center;font:12px/1.9 Inter,system-ui,sans-serif;color:#8b8fb5">'
+         '<a href="tarify.html" style="color:#8b8fb5">Тарифы и контакты</a> · <a href="oferta.html" style="color:#8b8fb5">Оферта</a> · '
+         '<a href="privacy.html" style="color:#8b8fb5">Политика</a> · <a href="soglasie.html" style="color:#8b8fb5">Согласие</a></nav>')
+if 'id="sitelinks"' not in s:
+    s = s.replace('<div id="app"></div>', '<div id="app"></div>' + LINKS, 1)
 open(os.path.join(root, 'index.html'), 'w', encoding='utf-8').write(s)
 sw = os.path.join(root, 'sw.js')
 w = open(sw, encoding='utf-8').read()
