@@ -207,8 +207,8 @@ button,.chip,.pill,.tabs button{-webkit-user-select:none;user-select:none;-webki
  .wk7 button.tdy{border-color:var(--y)}.wk7 button.rl{background:#2a2340;border-color:var(--p)}
 }
 /*TMM-INST-TITLE*/
-.insh{font-size:28px}
-@media(max-width:375px),(max-height:700px){.insh{font-size:24px;margin-bottom:10px}}
+.insh{font-size:26px;line-height:1.12}
+@media(max-width:375px),(max-height:700px){.insh{font-size:22px;margin-bottom:10px}}
 /*TMM-DESKTOP-TOP*/
 @media(min-width:1024px){
  .dtop{display:flex;align-items:center;gap:18px;padding:16px 20px;margin-bottom:22px;cursor:pointer}
@@ -290,7 +290,7 @@ function obFin(rel){ob=0;tab='home';S.cur=S.cur||S.p[S.p.length-1].id;S.tut=1;sa
 function instNeed(){return MOB&&!STAND()&&!AU.instSkip&&!(S&&S.inst)}
 function obInst(){const k=instKey(),G=IG[k],ios=IOS&&!INAPP,dn=AU.instTry;
  const st='<ol class="ist">'+G[1].map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol>';
- return `${masSay(dn?(ios?'Отлично! Теперь открой меня с иконки 👆':'Готово! Открывай меня с иконки 👆'):'Поставь меня на экран «Домой» — так я смогу напоминать о задачах 📲','play')}<h1 class="insh">Установи Музыкального Менеджера</h1>${dn?'':`<div class="c" style="font-size:15px;line-height:1.35;padding:12px 14px"><div style="margin-bottom:7px">🔔 <b>Пуш-напоминания</b> о задачах</div><div style="margin-bottom:7px">📱 <b>Своя иконка</b> и полный экран</div><div>🎯 <b>Без вкладок</b> — ничто не отвлекает</div>${IOS?'<div class="mut" style="font-size:13px;margin-top:8px">На iPhone пуши приходят только от приложения с экрана «Домой».</div>':''}</div>`}
+ return `${masSay(dn?(ios?'Отлично! Теперь открой меня с иконки 👆':'Готово! Открывай меня с иконки 👆'):'Поставь меня на экран «Домой» — так я смогу напоминать о задачах 📲','play')}<h1 class="insh">Установи личного музыкального менеджера как приложение</h1>${dn?'':`<div class="c" style="font-size:15px;line-height:1.35;padding:12px 14px"><div style="margin-bottom:7px">🔔 <b>Пуш-напоминания</b> о задачах</div><div style="margin-bottom:7px">📱 <b>Своя иконка</b> и полный экран</div><div>🎯 <b>Без вкладок</b> — ничто не отвлекает</div>${IOS?'<div class="mut" style="font-size:13px;margin-top:8px">На iPhone пуши приходят только от приложения с экрана «Домой».</div>':''}</div>`}
 ${EMB?'<div class="c" style="border-color:#5d4a1e;font-size:14px">Сейчас Музыкальный Менеджер открыт внутри Claude — отсюда на экран «Домой» не добавить. Этот шаг заработает на сайте ТММ.</div>':''}
 ${dn?`<div class="c" style="border-color:#2f6b47;font-size:15px;line-height:1.45">✅ Иконка Музыкального Менеджера появилась на экране «Домой»? Открой её — регистрация и всё остальное уже там.${ios?' Эту вкладку Safari можно закрыть.':''}</div>`:`<b style="font-size:15px">${G[0]}</b>${st}`}
 <div class="spacer"></div><div class="obf">${dn?`<button class="btn" onclick="obInstSkip()">Продолжить в браузере</button>`:BIP?`<button class="btn" onclick="instGo()">Установить</button>`:`<button class="btn" onclick="AU.instTry=1;auSave();render();window.scrollTo(0,0)">Готово, добавил(а)</button>`}${dn?`<button class="ghost" style="margin-top:4px" onclick="AU.instTry=0;auSave();render()">← Назад к инструкции</button>`:`<button class="ghost" style="margin-top:4px" onclick="obInstSkip()">Пропустить, продолжу в браузере</button>`}</div>`}
