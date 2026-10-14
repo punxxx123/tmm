@@ -41,7 +41,7 @@ OG = (
     '<meta property="og:title" content="Твой Музыкальный Менеджер">\n'
     '<meta property="og:description" content="%s">\n'
     '<meta property="og:url" content="%s">\n'
-    '<meta property="og:image" content="%sog.jpg?v=1">\n'
+    '<meta property="og:image" content="%sog.jpg?v=2">\n'
     '<meta property="og:image:width" content="1200">\n'
     '<meta property="og:image:height" content="630">\n'
     '<meta property="og:image:alt" content="ТММ — маскот в наушниках и название приложения">\n'
@@ -49,7 +49,7 @@ OG = (
     '<meta name="twitter:card" content="summary_large_image">\n'
     '<meta name="twitter:title" content="Твой Музыкальный Менеджер">\n'
     '<meta name="twitter:description" content="%s">\n'
-    '<meta name="twitter:image" content="%sog.jpg?v=1">\n'
+    '<meta name="twitter:image" content="%sog.jpg?v=2">\n'
 ) % (OG_DESC, SITE, OG_DESC, SITE, SITE, OG_DESC, SITE)
 if 'og:title' not in s and '</title>' in s:
     s = s.replace('</title>', '</title>\n' + OG.rstrip('\n'), 1)
