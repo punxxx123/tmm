@@ -34,6 +34,7 @@ for a, b in FIXES:
 SITE = 'https://tvoymuzmanager.ru/'
 OG_DESC = 'Бесплатный менеджер для артиста: план релиза, контент-план и задачи на каждый день. Помогает выпускать музыку регулярно и расти.'
 OG = (
+    '<meta name="robots" content="noindex, nofollow">\n'  # закрыто от поиска до запуска; к запуску убрать эту строку
     '<meta name="description" content="%s">\n'
     '<link rel="canonical" href="%s">\n'
     '<meta property="og:type" content="website">\n'
