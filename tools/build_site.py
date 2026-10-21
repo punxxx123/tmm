@@ -60,6 +60,21 @@ LINKS = ('<nav id="sitelinks" style="max-width:640px;margin:0 auto;padding:6px 1
          '<a href="privacy.html" style="color:#8b8fb5">Политика</a> · <a href="soglasie.html" style="color:#8b8fb5">Согласие</a></nav>')
 if 'id="sitelinks"' not in s:
     s = s.replace('<div id="app"></div>', '<div id="app"></div>' + LINKS, 1)
+# Автообновление открытого приложения: при возврате в приложение сверяем version.txt и перезагружаем,
+# если вышла новая версия (iPhone не перезагружает веб-приложение с экрана «Домой» сам). Не чаще раза на версию,
+# и не во время открытого окна или анкеты.
+UPD = ("<script>/*TMM-SITE-UPD*/(function(){var V='%s';function chk(){try{if(!navigator.onLine)return;"
+       "fetch('version.txt?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.text():''}).then(function(t){t=(t||'').trim();"
+       "if(!t||t===V)return;try{if(localStorage.getItem('tmm_upd')===t)return}catch(e){}"
+       "try{if((typeof mod!=='undefined'&&mod)||(typeof sb!=='undefined'&&sb))return}catch(e){}"
+       "var a=document.activeElement;if(a&&/INPUT|TEXTAREA|SELECT/.test(a.tagName))return;"
+       "try{localStorage.setItem('tmm_upd',t)}catch(e){}"
+       "var go=function(){location.reload()};try{navigator.serviceWorker.getRegistration().then(function(g){return g&&g.update()}).then(go,go)}catch(e){go()}"
+       "}).catch(function(){})}catch(e){}}"
+       "document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')chk()});"
+       "window.addEventListener('pageshow',function(){setTimeout(chk,1500)})})();</script>") % re.sub(r'[^A-Za-z0-9.-]', '', ver)
+if 'TMM-SITE-UPD' not in s:
+    s = s.replace('</body>', UPD + '</body>', 1) if '</body>' in s else s + UPD
 open(os.path.join(root, 'index.html'), 'w', encoding='utf-8').write(s)
 sw = os.path.join(root, 'sw.js')
 w = open(sw, encoding='utf-8').read()

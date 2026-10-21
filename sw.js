@@ -1,5 +1,5 @@
 /* ТММ: сервис-воркер. Работа без сети + заготовка под пуш-напоминания. */
-const CACHE = 'tmm-1792566752-7db8';
+const CACHE = 'tmm-1792592570-e871';
 const SHELL = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
@@ -16,7 +16,7 @@ self.addEventListener('fetch', e => {
   const u = new URL(r.url);
   // Страница: сначала сеть (свежая версия), без сети — из кэша.
   if (r.mode === 'navigate') {
-    e.respondWith(fetch(r).then(res => { const c = res.clone(); caches.open(CACHE).then(x => x.put('./', c)); return res; })
+    e.respondWith(fetch(r, { cache: 'no-cache' }).then(res => { const c = res.clone(); caches.open(CACHE).then(x => x.put('./', c)); return res; })
       .catch(() => caches.match('./').then(m => m || caches.match(r))));
     return;
   }
