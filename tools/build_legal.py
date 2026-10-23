@@ -45,7 +45,7 @@ def page(fname, title, desc, body):
     foot = ('<footer>Самозанятый %s, ИНН %s · <a href="mailto:%s">%s</a> · Telegram <a href="https://t.me/tvoymuzmanager_bot">@tvoymuzmanager_bot</a><br>'
             '© Твой Музыкальный Менеджер · tvoymuzmanager.ru</footer>') % (FIO, INN, MAIL, MAIL)
     out = ('<!doctype html>\n<html lang="ru"><head><meta charset="utf-8">\n'
-      '<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="theme-color" content="#0a0b10">\n'
+      '<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="theme-color" content="#0a0b10">\n<meta name="yandex-verification" content="dd6ca4f633511999">\n'
       '<title>%s — ТММ</title>\n<meta name="description" content="%s">\n'
       '<link rel="canonical" href="https://tvoymuzmanager.ru/%s">\n<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">\n'
       '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">\n'
