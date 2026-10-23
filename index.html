@@ -13,7 +13,6 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <title>Твой Музыкальный Менеджер</title>
-<meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Личный менеджер для артиста: план релиза, контент-план и задачи на каждый день. Помогает выпускать музыку регулярно и расти.">
 <link rel="canonical" href="https://tvoymuzmanager.ru/">
 <meta property="og:type" content="website">
@@ -30,6 +29,7 @@
 <meta name="twitter:title" content="Твой Музыкальный Менеджер">
 <meta name="twitter:description" content="Личный менеджер для артиста: план релиза, контент-план и задачи на каждый день. Помогает выпускать музыку регулярно и расти.">
 <meta name="twitter:image" content="https://tvoymuzmanager.ru/og.jpg?v=2">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Твой Музыкальный Менеджер","alternateName":"ТММ","url":"https://tvoymuzmanager.ru/","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android","inLanguage":"ru","description":"Личный менеджер для артиста: план релиза, контент-план и задачи на каждый день. Помогает выпускать музыку регулярно и расти.","offers":{"@type":"Offer","price":"0","priceCurrency":"RUB","description":"Бесплатно во время бета-теста"}}</script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0b10;--bg2:#100b20;--card:#161729;--card2:#1d1f36;--line:#2a2c47;--ink:#f4f4fb;--mut:#8b8fb5;--y:#f5c842;--p:#9b6bff;--o:#ff9a2e;--g:#4ade80;--bad:#ff6b81;color-scheme:dark;box-sizing:border-box}
@@ -248,7 +248,7 @@ button,.chip,.pill,.tabs button{-webkit-user-select:none;user-select:none;-webki
 /*TMM-V184*/ .qb .chip{max-width:100%;white-space:normal;text-align:left;line-height:1.25}.qb{padding:16px 0;border-bottom:1px solid var(--line)}.qb:last-child{border-bottom:0}.qh{display:block;font-weight:600;color:var(--ink);font-size:15.5px;line-height:1.35;margin:0 0 10px}.qn{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:12px;background:#2a2310;color:var(--y);font-size:13px;font-weight:800;margin-right:8px;padding:0 6px;vertical-align:1px}.qb input{margin-bottom:0}.qm{margin:0 -10px;padding:16px 10px;border-radius:12px;background:rgba(255,107,129,.08);box-shadow:inset 0 0 0 1.5px var(--bad);border-bottom-color:transparent}.qmt{color:var(--bad);font-size:13px;margin-top:8px}
 .stp{display:grid;gap:8px;margin:10px 0 4px}.stp>div{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:14px;border:1px solid var(--line);opacity:.6}.stp>div.on{opacity:1;border-color:var(--y);background:#1f1a10}.stp>div.ok{opacity:.85}.stp em{font-style:normal;font-size:22px;line-height:1.1}.stp b{display:block;font-size:15px}.stp span{font-size:13px;color:var(--mut)}
 #sab{position:fixed;top:0;left:0;right:0;height:max(env(safe-area-inset-top,0px),1px);background:var(--sabc,#0a0b10);z-index:60;pointer-events:none}
-</style></head><body><div id="sab" aria-hidden="true"></div><div id="app"></div><nav id="sitelinks" style="max-width:640px;margin:0 auto;padding:6px 16px calc(110px + env(safe-area-inset-bottom,0px));text-align:center;font:12px/1.9 Inter,system-ui,sans-serif;color:#8b8fb5"><a href="tarify.html" style="color:#8b8fb5">Тарифы и контакты</a> · <a href="oferta.html" style="color:#8b8fb5">Оферта</a> · <a href="privacy.html" style="color:#8b8fb5">Политика</a> · <a href="soglasie.html" style="color:#8b8fb5">Согласие</a></nav>
+</style></head><body><div id="sab" aria-hidden="true"></div><div id="app"></div><nav id="sitelinks" style="max-width:640px;margin:0 auto;padding:6px 16px calc(110px + env(safe-area-inset-bottom,0px));text-align:center;font:12px/1.9 Inter,system-ui,sans-serif;color:#8b8fb5"><a href="o-prilozhenii.html" style="color:#8b8fb5">О приложении</a> · <a href="tarify.html" style="color:#8b8fb5">Тарифы и контакты</a> · <a href="oferta.html" style="color:#8b8fb5">Оферта</a> · <a href="privacy.html" style="color:#8b8fb5">Политика</a> · <a href="soglasie.html" style="color:#8b8fb5">Согласие</a></nav>
 <script>
 const $=s=>document.querySelector(s),esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let AU={cur:null,acc:{}};try{AU=Object.assign(AU,JSON.parse(localStorage.getItem('tmm_auth')||'null')||{});AU.acc=AU.acc||{}}catch(e){}
