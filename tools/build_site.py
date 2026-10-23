@@ -35,6 +35,7 @@ SITE = 'https://tvoymuzmanager.ru/'
 OG_DESC = 'Личный менеджер для артиста: план релиза, контент-план и задачи на каждый день. Помогает выпускать музыку регулярно и расти.'
 OG = (
     '<meta name="yandex-verification" content="dd6ca4f633511999">\n'
+    '<meta name="google-site-verification" content="S24aPsb23Dqu9aSX_y_4lkWc5HjtEv0zkG6eLAQuId4">\n'
     '<meta name="description" content="%s">\n'
     '<link rel="canonical" href="%s">\n'
     '<meta property="og:type" content="website">\n'
