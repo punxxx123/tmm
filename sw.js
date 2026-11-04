@@ -1,5 +1,5 @@
 /* ТММ: сервис-воркер. Работа без сети + заготовка под пуш-напоминания. */
-const CACHE = 'tmm-1793748041-7a0f';
+const CACHE = 'tmm-1793783640-4f1b';
 const SHELL = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
